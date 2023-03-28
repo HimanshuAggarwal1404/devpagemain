@@ -89,7 +89,11 @@
     left: 0px;
 
 }
-#bricks1, #bricks2, #bricks3, #bricks4{
+
+#bricks1,
+#bricks2,
+#bricks3,
+#bricks4 {
     position: absolute;
     z-index: 6;
     bottom: 40vh;
@@ -97,21 +101,27 @@
     height: 10vh;
     width: 8vw;
 }
-#bricks1{
+
+#bricks1 {
     left: 7vw;
 }
-#bricks2{
+
+#bricks2 {
     left: 30vw;
 }
-#bricks3{
+
+#bricks3 {
     left: 53vw;
 }
-#bricks4{
+
+#bricks4 {
     left: 76vw;
 }
-#brickpopped{
+
+#brickpopped {
     display: none;
 }
+
 .jump {
     animation: jump 0.5s
 }
@@ -123,8 +133,72 @@
 .seeleft {
     transform: scaleX(-1);
 }
+
 .seeright {
     transform: scaleX(1);
+}
+
+#popupfront {
+    position: absolute;
+    z-index: 7;
+    top: 10vh;
+    left: 25vw;
+    height: 100vh;
+    width: 60vw;
+    scale: 0;
+    transition: 1s ease;
+}
+
+#popupfront img {
+    width: 60vw;
+}
+
+#popupback {
+    position: absolute;
+    z-index: 7;
+    top: 10vh;
+    left: 25vw;
+    height: 100vh;
+    width: 60vw;
+    scale: 0;
+    transition: 1s ease;
+
+}
+
+#popupback img {
+    width: 60vw;
+}
+
+#popupvideo {
+    position: absolute;
+    z-index: 7;
+    top: 10vh;
+    left: 25vw;
+    height: 100vh;
+    width: 60vw;
+    scale: 0;
+    transition: 1s ease;
+
+}
+
+#popupvideo img {
+    width: 60vw;
+}
+
+#popupdesign {
+    position: absolute;
+    z-index: 7;
+    top: 10vh;
+    left: 25vw;
+    height: 100vh;
+    width: 60vw;
+    scale: 0;
+    transition: 1s ease;
+
+}
+
+#popupdesign img {
+    width: 60vw;
 }
 
 @keyframes jump {

@@ -5,13 +5,7 @@ var w =
   document.body.clientWidth;
 document.onkeydown = getKeyAndMove;
 document.getElementById("static").classList.toggle("walkhidden");
-// document.getElementById("walk1").classList.toggle("walkvisible");
 document.getElementById("walk2").classList.toggle("walkhidden");
-
-
-
-// console.log(w);
-// console.log(brick1pos)
 
 function init() {
   objImage = document.getElementById("walk");
@@ -24,20 +18,13 @@ function getKeyAndMove(e) {
   switch (key_code) {
     case 37: //left arrow key
       moveLeft();
-      console.log("left");
       break;
     case 38: //Up arrow key
-      console.log("up");
-      objImage.classList.toggle("jump");
+      moveup();
 
       break;
     case 39: //right arrow key
       moveRight();
-      console.log("right");
-
-      break;
-    case 40: //down arrow key
-      console.log("down");
 
       break;
   }
@@ -45,45 +32,32 @@ function getKeyAndMove(e) {
 function moveLeft() {
   var pos = parseInt(objImage.style.left);
   if (pos >= 20) {
-    for (var i = 0; i <= Infinity ; i++) {
-
+    for (var i = 0; i <= 10000; i++) {
       if (i % 2 == 0) {
-        // document.getElementById("static").classList.toggle("walkhidden");
         document.getElementById("walk1").classList.toggle("walkhidden");
         document.getElementById("walk2").classList.toggle("walkhidden");
-        // document.getElementById("walk1").style.transform = scaleX("-1");
-        // document.getElementById("walk2").style.transform = scaleX("-1");
 
         objImage.style.left = pos - 5 + "px";
         console.log(pos);
         console.log(i);
       }
       if (i % 2 != 0) {
-        // document.getElementById("static").classList.toggle("walkhidden");
-        document.getElementById("walk2").classList.toggle("walkhidden");
+        document.getElementById("walk2").classList.toggle("walkhiiden");
         document.getElementById("walk1").classList.toggle("walkhidden");
-        // document.getElementById("walk1").style.transform = scaleX("-1");
-
-        // document.getElementById("walk2").style.transform = scaleX("-1");
-
-        // objImage.style.transform = scaleX(-1);
 
         objImage.style.left = pos - 5 + "px";
-    
+        console.log(pos);
+        console.log(i);
       }
     }
   }
 }
-function moveUp() {
-  objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
-}
+
 function moveRight() {
   var pos = parseInt(objImage.style.left);
   if (pos <= w - 120) {
     for (var i = 0; i <= 10000; i++) {
-
       if (i % 2 == 0) {
-        // document.getElementById("static").classList.toggle("walkhidden");
         document.getElementById("walk1").classList.toggle("walkhidden");
         document.getElementById("walk2").classList.toggle("walkhidden");
         objImage.style.left = pos + 5 + "px";
@@ -93,8 +67,7 @@ function moveRight() {
         console.log(i);
       }
       if (i % 2 != 0) {
-        // document.getElementById("static").classList.toggle("walkhidden");
-        document.getElementById("walk2").classList.toggle("walkhidden");
+        document.getElementById("walk2").classList.toggle("walkhiiden");
         document.getElementById("walk1").classList.toggle("walkhidden");
         objImage.style.left = pos + 5 + "px";
         objImage.style.transform = scaleX(1);
@@ -105,7 +78,44 @@ function moveRight() {
     }
   }
 }
-function moveDown() {
-  objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+function moveup() {
+  document.getElementById("popupfront").style.scale=0;
+
+  document.getElementById("popupback").style.scale=0;
+
+  document.getElementById("popupvideo").style.scale=0;
+
+  document.getElementById("popupdesign").style.scale=0;
+
+
+  brick1pos = document.getElementById("bricks1").offsetLeft;
+  brick2pos = document.getElementById("bricks2").offsetLeft;
+  brick3pos = document.getElementById("bricks3").offsetLeft;
+  brick4pos = document.getElementById("bricks4").offsetLeft;
+  personpos = document.getElementById("walk").offsetLeft;
+  if(personpos>=brick1pos && personpos<=brick1pos+300){
+    document.getElementById("popupfront").style.scale=1;
+    objImage.classList.toggle("jump");
+
+  }
+  if(personpos>=brick2pos && personpos<=brick2pos+300){
+    document.getElementById("popupback").style.scale=1;
+    objImage.classList.toggle("jump");
+
+  }
+  if(personpos>=brick3pos && personpos<=brick3pos+300){
+    document.getElementById("popupvideo").style.scale=1;
+    objImage.classList.toggle("jump");
+
+  }
+  if(personpos>=brick4pos && personpos<=brick4pos+300){
+    document.getElementById("popupdesign").style.scale=1;
+    objImage.classList.toggle("jump");
+
+  }
+
+
+
 }
+
 window.onload = init;
