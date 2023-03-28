@@ -72,7 +72,6 @@
     z-index: 5;
     left: 1vw;
     bottom: 11.5vh;
-
 }
 
 #static img {
@@ -80,23 +79,52 @@
     z-index: 5;
     top: 0px;
     left: 0px;
-
 }
 
 #walk1,
-#walk2  {
+#walk2 {
     position: relative;
     z-index: 5;
     top: 0px;
     left: 0px;
 
 }
-
+#bricks1, #bricks2, #bricks3, #bricks4{
+    position: absolute;
+    z-index: 6;
+    bottom: 40vh;
+    /* left: 25vw; */
+    height: 10vh;
+    width: 8vw;
+}
+#bricks1{
+    left: 7vw;
+}
+#bricks2{
+    left: 30vw;
+}
+#bricks3{
+    left: 53vw;
+}
+#bricks4{
+    left: 76vw;
+}
+#brickpopped{
+    display: none;
+}
 .jump {
     animation: jump 0.5s
 }
-.walkhidden{
+
+.walkhidden {
     display: none;
+}
+
+.seeleft {
+    transform: scaleX(-1);
+}
+.seeright {
+    transform: scaleX(1);
 }
 
 @keyframes jump {

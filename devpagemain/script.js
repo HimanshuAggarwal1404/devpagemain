@@ -10,6 +10,9 @@ document.getElementById("walk2").classList.toggle("walkhidden");
 
 
 
+// console.log(w);
+// console.log(brick1pos)
+
 function init() {
   objImage = document.getElementById("walk");
   objImage.style.position = "absolute";
@@ -42,8 +45,33 @@ function getKeyAndMove(e) {
 function moveLeft() {
   var pos = parseInt(objImage.style.left);
   if (pos >= 20) {
-    objImage.style.left = pos - 5 + "px";
-    console.log(pos);
+    for (var i = 0; i <= Infinity ; i++) {
+
+      if (i % 2 == 0) {
+        // document.getElementById("static").classList.toggle("walkhidden");
+        document.getElementById("walk1").classList.toggle("walkhidden");
+        document.getElementById("walk2").classList.toggle("walkhidden");
+        // document.getElementById("walk1").style.transform = scaleX("-1");
+        // document.getElementById("walk2").style.transform = scaleX("-1");
+
+        objImage.style.left = pos - 5 + "px";
+        console.log(pos);
+        console.log(i);
+      }
+      if (i % 2 != 0) {
+        // document.getElementById("static").classList.toggle("walkhidden");
+        document.getElementById("walk2").classList.toggle("walkhidden");
+        document.getElementById("walk1").classList.toggle("walkhidden");
+        // document.getElementById("walk1").style.transform = scaleX("-1");
+
+        // document.getElementById("walk2").style.transform = scaleX("-1");
+
+        // objImage.style.transform = scaleX(-1);
+
+        objImage.style.left = pos - 5 + "px";
+    
+      }
+    }
   }
 }
 function moveUp() {
@@ -59,14 +87,18 @@ function moveRight() {
         document.getElementById("walk1").classList.toggle("walkhidden");
         document.getElementById("walk2").classList.toggle("walkhidden");
         objImage.style.left = pos + 5 + "px";
+        objImage.style.transform = scaleX(1);
+
         console.log(pos);
         console.log(i);
       }
       if (i % 2 != 0) {
         // document.getElementById("static").classList.toggle("walkhidden");
-        document.getElementById("walk2").classList.toggle("walkhiiden");
+        document.getElementById("walk2").classList.toggle("walkhidden");
         document.getElementById("walk1").classList.toggle("walkhidden");
         objImage.style.left = pos + 5 + "px";
+        objImage.style.transform = scaleX(1);
+
         console.log(pos);
         console.log(i);
       }
