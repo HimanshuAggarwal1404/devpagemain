@@ -75,7 +75,7 @@
 
 }
 
-.static img {
+#static img {
     position: relative;
     z-index: 5;
     top: 0px;
@@ -83,13 +83,20 @@
 
 }
 
-.walk1,
-.walk2 {
-    display: none;
+#walk1,
+#walk2  {
+    position: relative;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+
 }
 
 .jump {
     animation: jump 0.5s
+}
+.walkhidden{
+    display: none;
 }
 
 @keyframes jump {

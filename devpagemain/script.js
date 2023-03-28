@@ -4,6 +4,12 @@ var w =
   document.documentElement.clientWidth ||
   document.body.clientWidth;
 document.onkeydown = getKeyAndMove;
+document.getElementById("static").classList.toggle("walkhidden");
+// document.getElementById("walk1").classList.toggle("walkvisible");
+document.getElementById("walk2").classList.toggle("walkhidden");
+
+
+
 function init() {
   objImage = document.getElementById("walk");
   objImage.style.position = "absolute";
@@ -34,12 +40,11 @@ function getKeyAndMove(e) {
   }
 }
 function moveLeft() {
-    var pos = parseInt(objImage.style.left);
-    if (pos >= 20) {
-      objImage.style.left = pos - 5 + "px";
-      console.log(pos);
-      
-    }
+  var pos = parseInt(objImage.style.left);
+  if (pos >= 20) {
+    objImage.style.left = pos - 5 + "px";
+    console.log(pos);
+  }
 }
 function moveUp() {
   objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
@@ -47,8 +52,25 @@ function moveUp() {
 function moveRight() {
   var pos = parseInt(objImage.style.left);
   if (pos <= w - 120) {
-    objImage.style.left = pos + 5 + "px";
-    console.log(pos);
+    for (var i = 0; i <= 10000; i++) {
+
+      if (i % 2 == 0) {
+        // document.getElementById("static").classList.toggle("walkhidden");
+        document.getElementById("walk1").classList.toggle("walkhidden");
+        document.getElementById("walk2").classList.toggle("walkhidden");
+        objImage.style.left = pos + 5 + "px";
+        console.log(pos);
+        console.log(i);
+      }
+      if (i % 2 != 0) {
+        // document.getElementById("static").classList.toggle("walkhidden");
+        document.getElementById("walk2").classList.toggle("walkhiiden");
+        document.getElementById("walk1").classList.toggle("walkhidden");
+        objImage.style.left = pos + 5 + "px";
+        console.log(pos);
+        console.log(i);
+      }
+    }
   }
 }
 function moveDown() {
