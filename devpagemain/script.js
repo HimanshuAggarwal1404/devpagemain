@@ -3,6 +3,7 @@ var iconpop1;
 var iconpop2;
 var iconpop3;
 var iconpop4;
+var check = 0; //box-close:0    box-open:1
 var w =
   window.innerWidth ||
   document.documentElement.clientWidth ||
@@ -10,7 +11,54 @@ var w =
 document.onkeydown = getKeyAndMove;
 document.getElementById("static").classList.toggle("walkhidden");
 document.getElementById("walk2").classList.toggle("walkhidden");
+document
+  .getElementById("popupfront")
+  .addEventListener("click", function closepop() {
+    document.getElementById("popupfront").style.scale = 0;
 
+    document.getElementById("popupback").style.scale = 0;
+
+    document.getElementById("popupvideo").style.scale = 0;
+
+    document.getElementById("popupdesign").style.scale = 0;
+    check = 0;
+  });
+document
+  .getElementById("popupback")
+  .addEventListener("click", function closepop() {
+    document.getElementById("popupfront").style.scale = 0;
+
+    document.getElementById("popupback").style.scale = 0;
+
+    document.getElementById("popupvideo").style.scale = 0;
+
+    document.getElementById("popupdesign").style.scale = 0;
+    check = 0;
+  });
+document
+  .getElementById("popupvideo")
+  .addEventListener("click", function closepop() {
+    document.getElementById("popupfront").style.scale = 0;
+
+    document.getElementById("popupback").style.scale = 0;
+
+    document.getElementById("popupvideo").style.scale = 0;
+
+    document.getElementById("popupdesign").style.scale = 0;
+    check = 0;
+  });
+document
+  .getElementById("popupdesign")
+  .addEventListener("click", function closepop() {
+    document.getElementById("popupfront").style.scale = 0;
+
+    document.getElementById("popupback").style.scale = 0;
+
+    document.getElementById("popupvideo").style.scale = 0;
+
+    document.getElementById("popupdesign").style.scale = 0;
+    check = 0;
+  });
 function init() {
   objImage = document.getElementById("walk");
   objImage.style.position = "absolute";
@@ -39,51 +87,54 @@ function getKeyAndMove(e) {
   }
 }
 function moveLeft() {
-  var pos = parseInt(objImage.style.left);
-  if (pos >= 20) {
-    for (var i = 0; i <= 10000; i++) {
-      if (i % 2 == 0) {
-        document.getElementById("walk1").classList.toggle("walkhidden");
-        document.getElementById("walk2").classList.toggle("walkhidden");
+  if (check == 0) {
+    var pos = parseInt(objImage.style.left);
+    if (pos >= 20) {
+      for (var i = 0; i <= 10000; i++) {
+        if (i % 2 == 0) {
+          document.getElementById("walk1").classList.toggle("walkhidden");
+          document.getElementById("walk2").classList.toggle("walkhidden");
 
-        objImage.style.left = pos - 35 + "px";
-      }
-      if (i % 2 != 0) {
-        document.getElementById("walk2").classList.toggle("walkhiiden");
-        document.getElementById("walk1").classList.toggle("walkhidden");
+          objImage.style.left = pos - 35 + "px";
+        }
+        if (i % 2 != 0) {
+          document.getElementById("walk2").classList.toggle("walkhiiden");
+          document.getElementById("walk1").classList.toggle("walkhidden");
 
-        objImage.style.left = pos - 35 + "px";
+          objImage.style.left = pos - 35 + "px";
+        }
       }
     }
   }
 }
 
 function moveRight() {
-  var pos = parseInt(objImage.style.left);
-  if (pos <= w - 120) {
-    for (var i = 0; i <= 10000; i++) {
-      if (i % 2 == 0) {
-        document.getElementById("walk1").classList.toggle("walkhidden");
-        document.getElementById("walk2").classList.toggle("walkhidden");
-        objImage.style.left = pos + 25 + "px";
-        objImage.style.transform = scaleX(1);
-
-      }
-      if (i % 2 != 0) {
-        document.getElementById("walk2").classList.toggle("walkhiiden");
-        document.getElementById("walk1").classList.toggle("walkhidden");
-        objImage.style.left = pos + 25 + "px";
-        objImage.style.transform = scaleX(1);
-
+  if (check == 0) {
+    var pos = parseInt(objImage.style.left);
+    if (pos <= w - 120) {
+      for (var i = 0; i <= 10000; i++) {
+        if (i % 2 == 0) {
+          document.getElementById("walk1").classList.toggle("walkhidden");
+          document.getElementById("walk2").classList.toggle("walkhidden");
+          objImage.style.left = pos + 25 + "px";
+          objImage.style.transform = scaleX(1);
+        }
+        if (i % 2 != 0) {
+          document.getElementById("walk2").classList.toggle("walkhiiden");
+          document.getElementById("walk1").classList.toggle("walkhidden");
+          objImage.style.left = pos + 25 + "px";
+          objImage.style.transform = scaleX(1);
+        }
       }
     }
   }
 }
-function jumping(){
-  objImage.classList.add("jump");
-
+function jumping() {
+  if ((check == 0)) {
+    objImage.classList.add("jump");
+  }
 }
-function moveup() {
+function moveup() { if (check==0){
   objImage.classList.remove("jump");
   iconpop1.classList.remove("iconjump");
   iconpop2.classList.remove("iconjump");
@@ -111,30 +162,31 @@ function moveup() {
   console.log(brick1pos);
   console.log(brick1width);
 
-
-
   if (personpos >= brick1pos && personpos <= brick1pos + brick1width) {
     objImage.classList.add("jump");
     document.getElementById("popupfront").style.scale = 1;
     iconpop1.classList.add("iconjump");
-    
+    check = 1;
   }
   if (personpos >= brick2pos && personpos <= brick2pos + brick2width) {
     objImage.classList.add("jump");
     document.getElementById("popupback").style.scale = 1;
     iconpop2.classList.add("iconjump");
+    check = 1;
   }
 
   if (personpos >= brick3pos && personpos <= brick3pos + brick3width) {
     objImage.classList.add("jump");
     document.getElementById("popupvideo").style.scale = 1;
     iconpop3.classList.add("iconjump");
+    check = 1;
   }
   if (personpos >= brick4pos && personpos <= brick4pos + brick4width) {
     objImage.classList.add("jump");
     document.getElementById("popupdesign").style.scale = 1;
     iconpop4.classList.add("iconjump");
+    check = 1;
   }
-}
+}}
 
 window.onload = init;
