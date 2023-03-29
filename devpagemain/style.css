@@ -179,7 +179,7 @@
 
 #popupfront {
     position: absolute;
-    z-index: 7;
+    z-index: 70;
     top: 10vh;
     left: 25vw;
     height: 100vh;
@@ -194,7 +194,7 @@
 
 #popupback {
     position: absolute;
-    z-index: 7;
+    z-index: 70;
     top: 10vh;
     left: 25vw;
     height: 100vh;
@@ -210,7 +210,7 @@
 
 #popupvideo {
     position: absolute;
-    z-index: 7;
+    z-index: 70;
     top: 10vh;
     left: 25vw;
     height: 100vh;
@@ -226,7 +226,7 @@
 
 #popupdesign {
     position: absolute;
-    z-index: 7;
+    z-index: 70;
     top: 10vh;
     left: 25vw;
     height: 100vh;
