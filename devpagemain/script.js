@@ -11,9 +11,64 @@ var w =
 document.onkeydown = getKeyAndMove;
 document.getElementById("static").classList.toggle("walkhidden");
 document.getElementById("walk2").classList.toggle("walkhidden");
-document
-  .getElementById("popupfront")
-  .addEventListener("click", function closepop() {
+document.addEventListener("click", (e) => {
+  console.log(e.target.id);
+  if (e.target.id == "popupfrontimg") {
+    document
+      .getElementById("popupfront")
+      .addEventListener("click", function closepop() {
+        document.getElementById("popupfront").style.scale = 1;
+
+        document.getElementById("popupback").style.scale = 0;
+
+        document.getElementById("popupvideo").style.scale = 0;
+
+        document.getElementById("popupdesign").style.scale = 0;
+        check = 1;
+      });
+  }
+  else if (e.target.id == "popupbackimg") {
+    document
+      .getElementById("popupback")
+      .addEventListener("click", function closepop() {
+        document.getElementById("popupfront").style.scale = 0;
+
+        document.getElementById("popupback").style.scale = 1;
+
+        document.getElementById("popupvideo").style.scale = 0;
+
+        document.getElementById("popupdesign").style.scale = 0;
+        check = 1;
+      });
+  }
+  else if (e.target.id == "popupvideoimg") {
+    document
+      .getElementById("popupvideo")
+      .addEventListener("click", function closepop() {
+        document.getElementById("popupfront").style.scale = 0;
+
+        document.getElementById("popupback").style.scale = 0;
+
+        document.getElementById("popupvideo").style.scale = 1;
+
+        document.getElementById("popupdesign").style.scale = 0;
+        check = 1;
+      });
+  }
+  else if (e.target.id == "popupdesignimg") {
+    document
+      .getElementById("popupdesign")
+      .addEventListener("click", function closepop() {
+        document.getElementById("popupfront").style.scale = 0;
+
+        document.getElementById("popupback").style.scale = 0;
+
+        document.getElementById("popupvideo").style.scale = 0;
+
+        document.getElementById("popupdesign").style.scale = 1;
+        check = 1;
+      });
+  } else {
     document.getElementById("popupfront").style.scale = 0;
 
     document.getElementById("popupback").style.scale = 0;
@@ -22,43 +77,9 @@ document
 
     document.getElementById("popupdesign").style.scale = 0;
     check = 0;
-  });
-document
-  .getElementById("popupback")
-  .addEventListener("click", function closepop() {
-    document.getElementById("popupfront").style.scale = 0;
+  }
+});
 
-    document.getElementById("popupback").style.scale = 0;
-
-    document.getElementById("popupvideo").style.scale = 0;
-
-    document.getElementById("popupdesign").style.scale = 0;
-    check = 0;
-  });
-document
-  .getElementById("popupvideo")
-  .addEventListener("click", function closepop() {
-    document.getElementById("popupfront").style.scale = 0;
-
-    document.getElementById("popupback").style.scale = 0;
-
-    document.getElementById("popupvideo").style.scale = 0;
-
-    document.getElementById("popupdesign").style.scale = 0;
-    check = 0;
-  });
-document
-  .getElementById("popupdesign")
-  .addEventListener("click", function closepop() {
-    document.getElementById("popupfront").style.scale = 0;
-
-    document.getElementById("popupback").style.scale = 0;
-
-    document.getElementById("popupvideo").style.scale = 0;
-
-    document.getElementById("popupdesign").style.scale = 0;
-    check = 0;
-  });
 function init() {
   objImage = document.getElementById("walk");
   objImage.style.position = "absolute";
