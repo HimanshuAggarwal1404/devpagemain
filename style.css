@@ -4,7 +4,8 @@
 
 }
 @font-face { font-family:custom ; src: url(cmdFont.woff); } 
-
+html{
+overflow:hidden:}
 
 .all {
     height: 100vh;
