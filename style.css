@@ -232,6 +232,52 @@
 
 }
 
+
+#popupfront1 {
+    position: absolute;
+    z-index: 70;
+    height: 75vh;
+    width: 60vw;
+    scale: 0;
+    transition: 1s ease;
+    top: 1vh;
+}
+
+
+#popupback1 {
+    position: absolute;
+    z-index: 70;
+    height: 75vh;
+    width: 60vw;
+    scale: 0;
+    transition: 1s ease;
+    top: 1vh;
+
+}
+
+#popupvideo1 {
+    position: absolute;
+    z-index: 70;
+    height: 75vh;
+    width: 60vw;
+    scale: 0;
+    transition: 1s ease;
+    top: 1vh;
+
+}
+
+#popupdesign1 {
+    position: absolute;
+    z-index: 70;
+    height: 75vh;
+    width: 60vw;
+    scale: 0;
+    transition: 1s ease;
+    top: 1vh;
+
+
+}
+
 @keyframes jump {
     0% {
         transform: translateY(0px);
@@ -385,16 +431,15 @@
     left: 2vw;
     position: relative;
     bottom: 0.4vh;
+    padding-top: 5px;
 }
 
 .name{
     padding-top: 7px;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: -0.5px;
     font-weight: 200;
     font-family: custom;    
-    
-
 }
 
