@@ -32,9 +32,8 @@ document.addEventListener("click", (f) => {
     if (personpos <= brick1pos + 20) {
       check=0;
 
-      while (pos <= brick1pos ) {
+      while (pos <= brick1pos +20) {
         var pos = parseInt(objImage.style.left);
-        console.log("in while loop")
         
           for (var i = 0; i <= 10000; i++) {
             if (i % 2 == 0) {
@@ -48,6 +47,29 @@ document.addEventListener("click", (f) => {
               objImage.style.left = pos + 25 + "px";
             }
           }
+        
+      }
+    }
+    else if (personpos >= brick1pos + 120) {
+      check=0;
+
+      while (pos >= brick1pos + 120) {
+        var pos = parseInt(objImage.style.left);
+          for (var i = 0; i <= 10000; i++) {
+            if (i % 2 == 0) {
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              document.getElementById("walk2").classList.toggle("walkhidden");
+    
+              objImage.style.left = pos - 35 + "px";
+            }
+            if (i % 2 != 0) {
+              document.getElementById("walk2").classList.toggle("walkhiiden");
+              document.getElementById("walk1").classList.toggle("walkhidden");
+    
+              objImage.style.left = pos - 35 + "px";
+            }
+          
+        }
         
       }
     }
