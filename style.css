@@ -5,7 +5,7 @@
 }
 @font-face { font-family:custom ; src: url(cmdFont.woff); } 
 html{
-overflow:hidden:}
+overflow:hidden;}
 
 .all {
     height: 100vh;
@@ -17,7 +17,9 @@ overflow:hidden:}
 .mobile{
     display: none;
 }
-
+.frontdevs{
+    display: flex;
+}
 .sky img {
     position: absolute;
     width: 100vw;
