@@ -97,9 +97,9 @@
     position: absolute;
     z-index: 6;
     bottom: 40vh;
-    /* left: 25vw; */
+    /* left: 19vw; */
     height: 10vh;
-    width: 15vw;
+    width: 8vw;
 }
 
 #bricks1 {
@@ -122,39 +122,46 @@
     display: none;
 }
 
+#icon1 , #icon2 , #icon3 , #icon4 {
+    height: 9vh;
+    width: 6vw;
+    left: 7vw;
+    position: absolute;
+    bottom: 1.4vh;
+}
+
 #icon1 img{
     height: 18vh;
     width: 6vw;
-    bottom: -3vh;
+    bottom: -5vh;
     position: absolute;
-    left: 6vw;
+ 
     z-index: 15;
 }
 
 #icon2 img{
-    height: 23vh;
+    height: 21vh;
     width: 7vw;
-    bottom: -5vh;
+    bottom: -6vh;
     position: absolute;
-    left: 6vw;
+    left: -1vw;
     z-index: 15;
 }
 
 #icon3 img{
-    height: 31vh;
+    height: 29vh;
     width: 8.5vw;
-    bottom: -8.5vh;
+    bottom: -9.5vh;
     position: absolute;
-    left: 5vw;
+    left: -2vw;
     z-index: 15;
 }
 
 #icon4 img{
-    height: 20vh;
+    height: 15vh;
     width: 5vw;
     bottom: -3vh;
     position: absolute;
-    left: 7vw;
     z-index: 15;
 }
 .jump {
@@ -180,64 +187,39 @@
 #popupfront {
     position: absolute;
     z-index: 70;
-    top: 10vh;
-    left: 25vw;
-    height: 100vh;
+    height: 75vh;
     width: 60vw;
     scale: 0;
     transition: 1s ease;
 }
 
-#popupfront img {
-    width: 60vw;
-}
 
 #popupback {
     position: absolute;
     z-index: 70;
-    top: 10vh;
-    left: 25vw;
-    height: 100vh;
+    height: 75vh;
     width: 60vw;
     scale: 0;
     transition: 1s ease;
-
-}
-
-#popupback img {
-    width: 60vw;
 }
 
 #popupvideo {
     position: absolute;
     z-index: 70;
-    top: 10vh;
-    left: 25vw;
-    height: 100vh;
+    height: 75vh;
     width: 60vw;
     scale: 0;
     transition: 1s ease;
-
-}
-
-#popupvideo img {
-    width: 60vw;
 }
 
 #popupdesign {
     position: absolute;
     z-index: 70;
-    top: 10vh;
-    left: 25vw;
-    height: 100vh;
+    height: 75vh;
     width: 60vw;
     scale: 0;
     transition: 1s ease;
 
-}
-
-#popupdesign img {
-    width: 60vw;
 }
 
 @keyframes jump {
@@ -267,3 +249,138 @@
         transform: translateY(0px);
     }
 }
+
+.move{
+    animation: move 0.7s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes move{
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(200px);
+    }
+}
+
+.rect{
+    /* background-color: #DE7352; */
+    width: 60vw;
+    height: 75vh;
+    position: absolute;
+    left: 17vw;
+    top: 8vh;
+    border: solid #C95C3A 30px;
+    border-radius: 70px;
+    /* background-image: url(cloctower3.png); */
+    background-repeat: no-repeat;
+    background-size: 50vw;
+   
+}
+
+.rect-color{
+    background-color: #de7352d5;
+    width: 60vw;
+    height: 75vh;
+    border-radius: 40px;
+}
+
+.head{
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 20px;
+    height: 5vh;
+    width: 45vw;
+    left: 26vw;
+    top: 13vh;
+    font-size: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A4543A;
+    font-weight: 900;
+    font-family: optima;
+}
+
+.box1{
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 20px;
+    height: 22vh;
+    width: 15vw;
+    left: 30vw;
+    top: 23vh;
+    text-align: center;
+
+}
+
+.box2{
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 20px;
+    height: 22vh;
+    width: 15vw;
+    left: 53vw;
+    top: 23vh;
+    text-align: center;
+
+}.box3{
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 20px;
+    height: 22vh;
+    width: 15vw;
+    left: 30vw;
+    top: 56vh;
+    text-align: center;
+
+}.box4{
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 22px;
+    height: 22vh;
+    width: 15vw;
+    left: 53vw;
+    top: 56vh;
+    text-align: center;
+
+}
+
+.box1 img , .box2 img , .box3 img , .box4 img{
+    width: 15vw;
+    height: 22vh;
+    border-radius: 18px;
+}
+
+.links{
+    display: flex;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    left: 5vw;
+    position: absolute;
+}
+
+.name{
+    padding-top: 7px;
+    color: white;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    font-weight: 900;
+    font-family: Oldtown, fantasy;
+    ;
+    
+
+}
+

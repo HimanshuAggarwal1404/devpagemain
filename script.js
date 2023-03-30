@@ -303,6 +303,9 @@ function getKeyAndMove(e) {
     case 37: //left arrow key
       moveLeft();
       break;
+      case 65: //left arrow key
+      moveLeft();
+      break;
     case 38: //Up arrow key
       moveup();
       jumping();
@@ -313,11 +316,20 @@ function getKeyAndMove(e) {
       jumping();
 
       break;
+      case 87: //Up arrow key
+      moveup();
+      jumping();
+
+      break;
     case 27: //Up arrow key
       exitpopup();
 
       break;
     case 39: //right arrow key
+      moveRight();
+
+      break;
+      case 68: //right arrow key
       moveRight();
 
       break;
