@@ -3,6 +3,8 @@
     margin: 0;
 
 }
+@font-face { font-family:custom ; src: url(cmdFont.woff); } 
+
 
 .all {
     height: 100vh;
@@ -99,9 +101,10 @@
     bottom: 40vh;
     /* left: 19vw; */
     height: 10vh;
-    width: 8vw;
 }
-
+#brick1 img{
+    width: 18vw;
+}
 #bricks1 {
     left: 7vw;
 }
@@ -123,46 +126,53 @@
 }
 
 #icon1 , #icon2 , #icon3 , #icon4 {
-    height: 9vh;
+    height: 6vh;
     width: 6vw;
-    left: 7vw;
+    left: 6vw;
     position: absolute;
-    bottom: 1.4vh;
+    bottom: 8.4vh;
 }
 
 #icon1 img{
-    height: 18vh;
-    width: 6vw;
-    bottom: -5vh;
+    height: 14vh;
+    width: 4vw;
+    bottom: -10vh;
     position: absolute;
- 
+    left: 0.6vw;
+
     z-index: 15;
 }
 
 #icon2 img{
-    height: 21vh;
-    width: 7vw;
-    bottom: -6vh;
+    height: 14vh;
+    width: 5vw;
+    bottom: -10vh;
     position: absolute;
     left: -1vw;
     z-index: 15;
+    left: 0.6vw;
+
 }
 
 #icon3 img{
-    height: 29vh;
-    width: 8.5vw;
-    bottom: -9.5vh;
+    height: 19vh;
+    width: 6vw;
+    bottom: -11vh;
     position: absolute;
     left: -2vw;
     z-index: 15;
+    left: -0.3vw;
+
 }
 
 #icon4 img{
     height: 15vh;
-    width: 5vw;
-    bottom: -3vh;
+    width: 3.1vw;
+    bottom: -10vh;
     position: absolute;
     z-index: 15;
+    left: 0.8vw;
+
 }
 .jump {
     animation: jump 0.5s
@@ -267,25 +277,28 @@
 }
 
 .rect{
-    /* background-color: #DE7352; */
-    width: 60vw;
-    height: 75vh;
+   
+    width: 65vw;
+    height: 85vh;
     position: absolute;
     left: 17vw;
     top: 8vh;
-    border: solid #C95C3A 30px;
-    border-radius: 70px;
-    /* background-image: url(cloctower3.png); */
+    background-image: url(frame.png);
     background-repeat: no-repeat;
-    background-size: 50vw;
+    background-size: 100% 100%;
    
 }
 
-.rect-color{
-    background-color: #de7352d5;
-    width: 60vw;
-    height: 75vh;
-    border-radius: 40px;
+.rect1{
+   width: 65vw;
+   height: 52vh;
+   position: absolute;
+   left: 17vw;
+   top: 8vh;
+   background-image: url(frame.png);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   
 }
 
 .head{
@@ -304,7 +317,7 @@
     align-items: center;
     color: #A4543A;
     font-weight: 900;
-    font-family: optima;
+    font-family: custom
 }
 
 .box1{
@@ -376,11 +389,10 @@
 .name{
     padding-top: 7px;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: -0.5px;
-    font-weight: 900;
-    font-family: Oldtown, fantasy;
-    ;
+    font-weight: 200;
+    font-family: custom;    
     
 
 }

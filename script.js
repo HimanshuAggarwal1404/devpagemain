@@ -223,6 +223,7 @@ document.addEventListener("click", (f) => {
   }
 });
 document.addEventListener("click", (e) => {
+  console.log(e.target)
   if (e.target.id == "popupfrontimg") {
     document
       .getElementById("popupfront")
