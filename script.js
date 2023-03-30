@@ -24,7 +24,16 @@ function exitpopup() {
 document.addEventListener("click", (f) => {
   console.log(f.target.id);
   var personpos = document.getElementById("walk").offsetLeft;
-  var brick1pos = document.getElementById("bricks1").offsetLeft;
+  brick1pos = document.getElementById("bricks1").offsetLeft;
+  brick2pos = document.getElementById("bricks2").offsetLeft;
+  brick3pos = document.getElementById("bricks3").offsetLeft;
+  brick4pos = document.getElementById("bricks4").offsetLeft;
+  personpos = document.getElementById("walk").offsetLeft;
+  brick1width = document.getElementById("bricks1").offsetWidth;
+  brick2width = document.getElementById("bricks2").offsetWidth;
+  brick3width = document.getElementById("bricks3").offsetWidth;
+  brick4width = document.getElementById("bricks4").offsetWidth;
+
   var pos = parseInt(objImage.style.left);
 
 
@@ -50,10 +59,148 @@ document.addEventListener("click", (f) => {
         
       }
     }
-    else if (personpos >= brick1pos + 120) {
+    else if (personpos >= brick1pos + brick1width) {
       check=0;
 
       while (pos >= brick1pos + 120) {
+        var pos = parseInt(objImage.style.left);
+          for (var i = 0; i <= 10000; i++) {
+            if (i % 2 == 0) {
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              document.getElementById("walk2").classList.toggle("walkhidden");
+    
+              objImage.style.left = pos - 35 + "px";
+            }
+            if (i % 2 != 0) {
+              document.getElementById("walk2").classList.toggle("walkhiiden");
+              document.getElementById("walk1").classList.toggle("walkhidden");
+    
+              objImage.style.left = pos - 35 + "px";
+            }
+          
+        }
+        
+      }
+    }
+  }
+  else if (f.target.id=="pythonlogo"){
+    if (personpos <= brick2pos + 20) {
+      check=0;
+
+      while (pos <= brick2pos +20) {
+        var pos = parseInt(objImage.style.left);
+        
+          for (var i = 0; i <= 10000; i++) {
+            if (i % 2 == 0) {
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              document.getElementById("walk2").classList.toggle("walkhidden");
+              objImage.style.left = pos + 25 + "px";
+            }
+            if (i % 2 != 0) {
+              document.getElementById("walk2").classList.toggle("walkhiiden");
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              objImage.style.left = pos + 25 + "px";
+            }
+          }
+        
+      }
+    }
+    else if (personpos >= brick2pos + brick2width) {
+      check=0;
+
+      while (pos >= brick2pos + 120) {
+        var pos = parseInt(objImage.style.left);
+          for (var i = 0; i <= 10000; i++) {
+            if (i % 2 == 0) {
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              document.getElementById("walk2").classList.toggle("walkhidden");
+    
+              objImage.style.left = pos - 35 + "px";
+            }
+            if (i % 2 != 0) {
+              document.getElementById("walk2").classList.toggle("walkhiiden");
+              document.getElementById("walk1").classList.toggle("walkhidden");
+    
+              objImage.style.left = pos - 35 + "px";
+            }
+          
+        }
+        
+      }
+    }
+  }
+  else if (f.target.id=="blenderlogo"){
+    if (personpos <= brick3pos + 20) {
+      check=0;
+
+      while (pos <= brick3pos +20) {
+        var pos = parseInt(objImage.style.left);
+        
+          for (var i = 0; i <= 10000; i++) {
+            if (i % 2 == 0) {
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              document.getElementById("walk2").classList.toggle("walkhidden");
+              objImage.style.left = pos + 25 + "px";
+            }
+            if (i % 2 != 0) {
+              document.getElementById("walk2").classList.toggle("walkhiiden");
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              objImage.style.left = pos + 25 + "px";
+            }
+          }
+        
+      }
+    }
+    else if (personpos >= brick3pos + brick2width) {
+      check=0;
+
+      while (pos >= brick3pos + 120) {
+        var pos = parseInt(objImage.style.left);
+          for (var i = 0; i <= 10000; i++) {
+            if (i % 2 == 0) {
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              document.getElementById("walk2").classList.toggle("walkhidden");
+    
+              objImage.style.left = pos - 35 + "px";
+            }
+            if (i % 2 != 0) {
+              document.getElementById("walk2").classList.toggle("walkhiiden");
+              document.getElementById("walk1").classList.toggle("walkhidden");
+    
+              objImage.style.left = pos - 35 + "px";
+            }
+          
+        }
+        
+      }
+    }
+  }
+  else if (f.target.id=="figmalogo"){
+    if (personpos <= brick4pos + 20) {
+      check=0;
+
+      while (pos <= brick4pos +20) {
+        var pos = parseInt(objImage.style.left);
+        
+          for (var i = 0; i <= 10000; i++) {
+            if (i % 2 == 0) {
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              document.getElementById("walk2").classList.toggle("walkhidden");
+              objImage.style.left = pos + 25 + "px";
+            }
+            if (i % 2 != 0) {
+              document.getElementById("walk2").classList.toggle("walkhiiden");
+              document.getElementById("walk1").classList.toggle("walkhidden");
+              objImage.style.left = pos + 25 + "px";
+            }
+          }
+        
+      }
+    }
+    else if (personpos >= brick4pos + brick2width) {
+      check=0;
+
+      while (pos >= brick4pos + 120) {
         var pos = parseInt(objImage.style.left);
           for (var i = 0; i <= 10000; i++) {
             if (i % 2 == 0) {
