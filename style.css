@@ -382,8 +382,9 @@
     align-items: center;
     text-align: center;
     gap: 10px;
-    left: 3vw;
-    position: absolute;
+    left: 2vw;
+    position: relative;
+    bottom: 0.4vh;
 }
 
 .name{
