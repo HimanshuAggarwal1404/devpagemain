@@ -28,6 +28,9 @@
         width: 100vw;
 
     }
+    .mobile.frontdevs1.frontdevs.box1{
+        left: -2vw;
+    }
 
     /* .brickflex{
     display: flex;
@@ -303,26 +306,30 @@
     }
     .box1,
     .box1 img {
-        height: 18vh;
-        width: 19vw;
+        height: 14vh;
+        width: 22vw;
+        left: 21vw;
     }
 
     .box2,
     .box2 img {
-        height: 18vh;
-        width: 19vw;
+        height: 14vh;
+        width: 22vw;
     }
 
     .box3,
     .box3 img {
-        height: 18vh;
-        width: 19vw;
+        height: 14vh;
+        width: 22vw;
+        left: 21vw;
+
     }
 
     .box4,
     .box4 img {
-        height: 18vh;
-        width: 19vw;
+        height: 14vh;
+        width: 22vw;
+        left: 52vw;
     }
     .head{
         font-size: 18px;
