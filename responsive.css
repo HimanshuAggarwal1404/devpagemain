@@ -1,23 +1,65 @@
-.links a img{
-    height: 25px;
-    width: 25px;
-}
-.frontdevs{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 @media(max-width:1000px) {
     .all {
         display: none;
     }
 
-    body {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
+    .rect {
+        background-image: url(mobileframe.png);
+        width: 90vw;
+        left: 5vw;
+        height: 90vh;
+        top: 3vh;
     }
 
+    .rect1 {
+        background-image: url(mobileframe.png);
+        width: 90vw;
+        left: 5vw;
+        height: 90vh;
+        top: 3vh;
+    }
+
+    .head {
+        top: 7vh;
+    }
+
+    .box1 {
+        width: 18vw;
+        left: 23vw;
+    }
+
+    .box2 {
+        width: 18vw;
+        left: 58vw;
+    }
+
+    .box3 {
+        width: 18vw;
+        left: 23vw;
+
+    }
+
+    .box4 {
+        width: 18vw;
+        left: 58vw;
+
+    }
+
+    .box5{
+        height: 20vh;
+        width: 18vw;
+        left: 20.5vw;
+        top: 15vh;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .links {
+        padding-top: 3px;
+        left: 5vw;
+    }
 
     .mobile {
         display: block;
@@ -27,9 +69,6 @@
         height: 100vh;
         width: 100vw;
 
-    }
-    .mobile.frontdevs1.frontdevs.box1{
-        left: -2vw;
     }
 
     /* .brickflex{
@@ -102,9 +141,18 @@
     #iconm4 {
         left: 10.5vw;
     }
+
+    .box3 {
+        margin-top: 2vh;
+    }
+
+    .box4 {
+        margin-top: 2vh;
+    }
 }
 
 @media(max-width:700px) {
+
     .brickflex1 {
         flex-direction: column;
         gap: 7vw;
@@ -128,6 +176,11 @@
     #iconm4 {
         left: 14vw;
     }
+
+    .name {
+        padding-top: 3px;
+    }
+
 }
 
 @media(max-width:650px) {
@@ -146,31 +199,9 @@
         height: 15vh;
         width: 12vw;
     }
-    .box1,
-    .box1 img {
-        height: 18vh;
-        width: 17vw;
-    }
 
-    .box2,
-    .box2 img {
-        height: 18vh;
-        width: 17vw;
-    }
-
-    .box3,
-    .box3 img {
-        height: 18vh;
-        width: 17vw;
-    }
-
-    .box4,
-    .box4 img {
-        height: 18vh;
-        width: 17vw;
-    }
-    .head{
-        font-size: 30px;
+    .links {
+        left: 4vw;
     }
 }
 
@@ -182,36 +213,34 @@
     #iconm4 {
         left: 17vw;
     }
-    .links a img{
-        height: 15px;
-        width: 15px;
+
+    .box1{
+        left: 20vw;
+        top: 20vh;
+    }
+    .box2{
+        left: 61vw;
+        top: 20vh;
+    }
+    .box3{
+        left: 20vw;
+        top: 54vh;
+    }
+    .box4{
+        left: 61vw;
+        top: 54vh;
     }
 
-    .box1,
-    .box1 img {
-        height: 18vh;
-        width: 18vw;
+    .name{
+        width: 20vw;
     }
 
-    .box2,
-    .box2 img {
-        height: 18vh;
-        width: 17vw;
+    .links{
+        left: 3vw;
     }
 
-    .box3,
-    .box3 img {
-        height: 18vh;
-        width: 17vw;
-    }
 
-    .box4,
-    .box4 img {
-        height: 18vh;
-        width: 17vw;
-    }
 }
-
 
 @media(max-width:550px) {
 
@@ -240,9 +269,6 @@
         height: 17vh;
         width: 14vw;
     }
-    .head{
-        font-size: 25px;
-    }
 }
 
 @media(max-width:450px) {
@@ -262,29 +288,34 @@
         height: 21vh;
         width: 17vw;
     }
-    .box1,
-    .box1 img {
-        height: 18vh;
-        width: 17vw;
+
+    .box1 {
+        width: 22vw;
+        left: 18vw;
     }
 
-    .box2,
-    .box2 img {
-        height: 18vh;
-        width: 17vw;
+    .box2 {
+        width: 22vw;
+        left: 61vw;
     }
 
-    .box3,
-    .box3 img {
-        height: 18vh;
-        width: 17vw;
+    .box3 {
+        width: 22vw;
+        left: 18vw;
+
     }
 
-    .box4,
-    .box4 img {
-        height: 18vh;
-        width: 17vw;
+    .box4 {
+        width: 22vw;
+        left: 61vw;
+
     }
+
+    .head{
+        font-size: 1.5em;
+    }
+
+    
 }
 
 @media(max-width:400px) {
@@ -304,36 +335,6 @@
         height: 21vh;
         width: 19vw;
     }
-    .box1,
-    .box1 img {
-        height: 14vh;
-        width: 22vw;
-        left: 21vw;
-    }
-
-    .box2,
-    .box2 img {
-        height: 14vh;
-        width: 22vw;
-    }
-
-    .box3,
-    .box3 img {
-        height: 14vh;
-        width: 22vw;
-        left: 21vw;
-
-    }
-
-    .box4,
-    .box4 img {
-        height: 14vh;
-        width: 22vw;
-        left: 52vw;
-    }
-    .head{
-        font-size: 18px;
-    }
 }
 
 @media(max-width:300px) {
@@ -344,31 +345,5 @@
     #iconm4 {
         left: 35vw;
         bottom: -1vh;
-    }
-    .head{
-        font-size: 20px;
-    }
-    .box1,
-    .box1 img {
-        height: 15vh;
-        width: 15vw;
-    }
-
-    .box2,
-    .box2 img {
-        height: 15vh;
-        width: 15vw;
-    }
-
-    .box3,
-    .box3 img {
-        height: 15vh;
-        width: 15vw;
-    }
-
-    .box4,
-    .box4 img {
-        height: 15vh;
-        width: 15vw;
     }
 }
