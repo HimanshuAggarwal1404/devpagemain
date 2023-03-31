@@ -21,6 +21,7 @@ function exitpopup() {
   document.getElementById("popupdesign").style.scale = 0;
   check = 0;
 }
+
 document.addEventListener("click", (f) => {
   console.log(f.target.id);
   var personpos = document.getElementById("walk").offsetLeft;
@@ -344,12 +345,18 @@ function moveLeft() {
         if (i % 2 == 0) {
           document.getElementById("walk1").classList.toggle("walkhidden");
           document.getElementById("walk2").classList.toggle("walkhidden");
+          document.getElementById("walk1").style.transform= "rotateY(180deg)";
+          document.getElementById("walk2").style.transform= "rotateY(180deg)";
+
+
 
           objImage.style.left = pos - 35 + "px";
         }
         if (i % 2 != 0) {
           document.getElementById("walk2").classList.toggle("walkhiiden");
           document.getElementById("walk1").classList.toggle("walkhidden");
+          document.getElementById("walk1").style.transform= "rotateY(180deg)";
+          document.getElementById("walk2").style.transform= "rotateY(180deg)";
 
           objImage.style.left = pos - 35 + "px";
         }
@@ -366,11 +373,15 @@ function moveRight() {
         if (i % 2 == 0) {
           document.getElementById("walk1").classList.toggle("walkhidden");
           document.getElementById("walk2").classList.toggle("walkhidden");
+          document.getElementById("walk1").style.transform= "rotateY(0deg)";
+          document.getElementById("walk2").style.transform= "rotateY(0deg)";
           objImage.style.left = pos + 25 + "px";
         }
         if (i % 2 != 0) {
-          document.getElementById("walk2").classList.toggle("walkhiiden");
+          document.getElementById("walk2").classList.toggle("walkhidden");
           document.getElementById("walk1").classList.toggle("walkhidden");
+          document.getElementById("walk1").style.transform= "rotateY(0deg)";
+          document.getElementById("walk2").style.transform= "rotateY(0deg)";
           objImage.style.left = pos + 25 + "px";
         }
       }
