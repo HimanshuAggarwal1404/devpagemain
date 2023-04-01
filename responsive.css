@@ -3,53 +3,104 @@
         display: none;
     }
 
+
+    .row1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        position: absolute;
+        gap: 12vh 12vw;
+        justify-content: space-around;
+        left: 27.5vw;
+        top: 18vh;
+
+    }
     .rect {
         background-image: url(mobileframe.png);
         width: 90vw;
         left: 5vw;
-        height: 90vh;
-        top: 3vh;
+        height: 95vh;
+        top: 1.5vh;
     }
 
     .rect1 {
         background-image: url(mobileframe.png);
         width: 90vw;
         left: 5vw;
-        height: 90vh;
-        top: 3vh;
+        height: 95vh;
+        top: 1.5vh;
     }
 
     .head {
         top: 7vh;
     }
 
-    .box1 {
+    .boxm1 {
         width: 18vw;
-        left: 23vw;
+        /* left: 23vw; */
+        /* position: absolute; */
+        background-color: #CF917D;
+        border: solid #A4543A 5px;
+        border-radius: 20px;
+        height: 22vh;
+        text-align: center;
     }
 
-    .box2 {
+    .boxm2 {
         width: 18vw;
-        left: 58vw;
+        /* left: 58vw; */
+        /* position: absolute; */
+        background-color: #CF917D;
+        border: solid #A4543A 5px;
+        border-radius: 20px;
+        height: 22vh;
+        text-align: center;
     }
 
-    .box3 {
+    .boxm3 {
         width: 18vw;
-        left: 23vw;
-
+        /* left: 23vw; */
+        /* position: absolute; */
+        background-color: #CF917D;
+        border: solid #A4543A 5px;
+        border-radius: 20px;
+        height: 22vh;
+        text-align: center;
     }
 
-    .box4 {
+    .boxm4 {
         width: 18vw;
-        left: 58vw;
+        /* left: 58vw; */
+        /* position: absolute; */
+        background-color: #CF917D;
+        border: solid #A4543A 5px;
+        border-radius: 20px;
+        height: 22vh;
+        text-align: center;
+  }
 
-    }
-
-    .box5 {
+    .boxm5 {
+        width: 16vw;
+        background-color: #CF917D;
+        border: solid #A4543A 5px;
+        border-radius: 20px;
         height: 20vh;
-        width: 14vw;
-        left: 42.5vw;
-        top: 40vh;
+        text-align: center;
+        position: absolute;
+top: 40vh;
+left: 41vw;
+
+    }
+
+    .boxm1 img,
+    .boxm2 img,
+    .boxm3 img,
+    .boxm4 img,
+    .boxm5 img{
+        height: 100%;
+        width: 100%;
+        border-radius: 17px;
+
     }
 
     .name {
@@ -74,15 +125,6 @@
         width: 100vw;
 
     }
-
-    /* .brickflex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10vh;
-    gap: 7vh;
-} */
 
     .brickflex1 {
         padding-top: 20vh;
@@ -185,18 +227,20 @@
         padding-top: 3px;
     }
 
-    .box5{
+    .box5 {
         height: 18vh;
         width: 18vw;
         top: 42vh;
         left: 40vw;
     }
 
-    .box1 , .box3 {
+    .box1,
+    .box3 {
         left: 20vw;
     }
 
-    .box2 , .box4{
+    .box2,
+    .box4 {
         left: 60vw;
     }
 
@@ -221,6 +265,24 @@
 
     .links {
         left: 4vw;
+    }
+
+    .row1{
+        left: 25vw;
+    }
+
+    .boxm1 , .boxm2 , .boxm3 , .boxm4{
+        height: 16vh;
+        width: 20vw;
+    }
+    .boxm5{
+        height: 16vh;
+        width: 17vh;
+        top: 36vh;
+        left: 40.3vw;
+    }
+    .row1{
+        gap: 14vh 14vw;
     }
 }
 
@@ -253,7 +315,7 @@
         top: 54vh;
     }
 
-    .box5{
+    .box5 {
         width: 20vw;
         height: 18vh;
         left: 39.2vw;
@@ -266,6 +328,10 @@
 
     .links {
         left: 3vw;
+    }
+
+    .boxm5{
+        left: 39.5vw;
     }
 
 
@@ -288,7 +354,8 @@
         width: 20vw;
         height: 18vh;
     }
-    .box5{
+
+    .box5 {
         width: 20vw;
         height: 18vh;
         left: 40.4vw;
@@ -321,6 +388,15 @@
     #iconm4 img {
         height: 17vh;
         width: 14vw;
+    }
+
+    .boxm5{
+        width: 19vw;
+        height: 15.5vh;
+    }
+
+    .row1{
+        gap: 14vh 14vw;
     }
 }
 
@@ -388,11 +464,15 @@
         font-size: 15px;
     }
 
-    .box5{
+    .box5 {
         width: 24vw;
         height: 17vh;
         left: 38.4vw;
         top: 39vh;
+    }
+
+    .boxm5{
+        top: 38vh;
     }
 
 
@@ -417,20 +497,40 @@
     }
 
 
-  .box1 , .box3{
-    left: 13vw;
-    width: 27vw;
-  }
+    .box1,
+    .box3 {
+        left: 13vw;
+        width: 27vw;
+    }
 
-  .box2 , .box4{
-    width: 27vw;
-    left: 61.5vw;
-  }
+    .box2,
+    .box4 {
+        width: 27vw;
+        left: 61.5vw;
+    }
 
-  .box5{
-    width: 27vw ;
-    left: 37vw;
-  }
+    .box5 {
+        width: 27vw;
+        left: 37vw;
+    }
+
+    .boxm1 , .boxm2 , .boxm3 , .boxm4{
+        height: 17vh;
+        width: 23vw;
+    }
+
+    .boxm5{
+        height: 17vh;
+        width: 25vw;
+        left: 36vw;
+        top: 39vh;
+    }
+    .row1{
+        left: 21vw;
+        gap: 15vh 15vw;
+    }
+
+
 }
 
 @media(max-width:350px) {
@@ -465,7 +565,8 @@
     .name {
         font-size: 17.5px;
     }
-    .box5{
+
+    .box5 {
         height: 14.5vh;
         left: 36vw;
     }
@@ -473,10 +574,26 @@
     .links {
         left: 2vw;
     }
-    .head{
+
+    .head {
         font-size: 1.2em;
     }
 
+    .boxm1 , .boxm2 , .boxm3 , .boxm4{
+        height: 15.5vh;
+        width: 26vw;
+    }
+
+    .boxm5{
+        width: 27vw;
+        height: 16vh;
+        left: 36vw;
+        top: 40vh;
+    }
+    .row1{
+        left: 17.5vw;
+        gap: 17vh 13vw;
+    }
 }
 
 @media(max-width:300px) {
