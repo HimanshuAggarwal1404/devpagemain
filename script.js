@@ -23,7 +23,6 @@ function exitpopup() {
 }
 
 document.addEventListener("click", (f) => {
-  console.log(f.target.id);
   var personpos = document.getElementById("walk").offsetLeft;
   brick1pos = document.getElementById("bricks1").offsetLeft;
   brick2pos = document.getElementById("bricks2").offsetLeft;
@@ -224,7 +223,6 @@ document.addEventListener("click", (f) => {
   }
 });
 document.addEventListener("click", (e) => {
-  console.log(e.target)
   if (e.target.id == "popupfrontimg") {
     document
       .getElementById("popupfront")
@@ -418,9 +416,6 @@ function moveup() {
     brick2width = document.getElementById("bricks2").offsetWidth;
     brick3width = document.getElementById("bricks3").offsetWidth;
     brick4width = document.getElementById("bricks4").offsetWidth;
-    console.log(personpos);
-    console.log(brick1pos);
-    console.log(brick1width);
 
     if (personpos >= brick1pos && personpos <= brick1pos + brick1width) {
       objImage.classList.add("jump");
