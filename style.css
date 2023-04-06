@@ -33,14 +33,7 @@ html {
     top: 2vh;
 
 }
-.grass img {
-    z-index: 2;
-    position: absolute;
-    height: 12vh;
-    bottom: 0px;
-    width: 100vw;
-    object-fit: cover;
-}
+
 .txt img {
     height: 30px;
     width: 60px;
@@ -66,6 +59,15 @@ html {
     z-index: 1;
 }
 
+.grass img {
+    z-index: 2;
+    /*grass*/
+    position: absolute;
+    height: 12vh;
+    bottom: 0px;
+    width: 100vw;
+    object-fit: cover;
+}
 
 .ct img {
     z-index: 3;
@@ -420,6 +422,17 @@ html {
     text-align: center;
 }
 
+.boxb1 {
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 7px;
+    height: 22vh;
+    width: 10vw;
+    left: 25vw;
+    top: 21vh;
+    text-align: center;
+}
 
 .box2 {
     position: absolute;
@@ -430,6 +443,19 @@ html {
     width: 10vw;
     left: 55vw;
     top: 23vh;
+    text-align: center;
+
+}
+
+.boxb2 {
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 7px;
+    height: 22vh;
+    width: 10vw;
+    left: 63vw;
+    top: 21vh;
     text-align: center;
 
 }
@@ -445,7 +471,35 @@ html {
     top: 56vh;
     text-align: center;
 
+
+
 }
+
+.boxb3 {
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 7px;
+    height: 22vh;
+    width: 10vw;
+    left: 34.5vw;
+    top: 55vh;
+    text-align: center;
+}
+
+.boxb4 {
+    position: absolute;
+    background-color: #CF917D;
+    border: solid #A4543A 5px;
+    border-radius: 7px;
+    height: 22vh;
+    width: 10vw;
+    left: 54vw;
+    top: 55vh;
+    text-align: center;
+}
+
+
 
 .box4 {
     position: absolute;
@@ -465,10 +519,10 @@ html {
     background-color: #CF917D;
     border: solid #A4543A 5px;
     border-radius: 7px;
-    height: 20vh;
-    width: 9vw;
+    height: 22vh;
+    width: 10vw;
     left: 44.5vw;
-    top: 38vh;
+    top: 21vh;
     text-align: center;
 }
 
@@ -476,7 +530,11 @@ html {
 .box2 img,
 .box3 img,
 .box4 img,
-.box5 img {
+.box5 img,
+.boxb1 img,
+.boxb2 img,
+.boxb3 img,
+.boxb4 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
