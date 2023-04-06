@@ -66,14 +66,6 @@ html {
     z-index: 1;
 }
 
-.grass img {
-    z-index: 2;
-    /grass/ position: absolute;
-    height: 12vh;
-    bottom: 0px;
-    width: 100vw;
-    object-fit: cover;
-}
 
 .ct img {
     z-index: 3;
