@@ -19,7 +19,6 @@ function func4(){
     devui.style.scale = 1;
 }
 document.addEventListener("click", (e) => {
-    console.log(e.target)
     if (e.target.id == "popupfrontimg1") {
       document
         .getElementById("popupfront")
