@@ -21,7 +21,7 @@
         background-image: url(mobileframe.png);
         width: 90vw;
         left: 5vw;
-        height: 88vh;
+        height: 85vh;
         top: 1.5vh;
     }
 
@@ -29,9 +29,13 @@
         background-image: url(mobileframe.png);
         width: 88vw;
         left: 5vw;
-        height: 90vh;
-        top: 1.5vh;
+        height: 50vh;
+        top: 10.5vh;
     }
+    .video .head{
+        top: 11.5vh;
+    }
+    
 
     .head {
         top: 7vh;
