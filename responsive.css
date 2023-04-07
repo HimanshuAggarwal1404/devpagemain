@@ -1,3 +1,14 @@
+#close{
+    z-index: 200;
+    position: relative;
+    font-size: 45px;
+    left: 45vw;
+    top: 5vh;
+    scale: 0;
+    display: flex;
+    transition: 1s ease;
+}
+
 @media(max-width:1000px) {
     .all {
         display: none;
