@@ -113,7 +113,9 @@ html {
     left: 1vw;
     bottom: 11.5vh;
 }
-
+#static{
+    scale: 0;
+}
 #static img {
     position: relative;
     z-index: 5;

@@ -9,8 +9,6 @@ var w =
   document.documentElement.clientWidth ||
   document.body.clientWidth;
 document.onkeydown = getKeyAndMove;
-document.getElementById("static").classList.toggle("walkhidden");
-document.getElementById("walk2").classList.toggle("walkhidden");
 function exitpopup() {
   document.getElementById("popupfront").style.scale = 0;
 
