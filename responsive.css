@@ -8,7 +8,9 @@
     display: flex;
     transition: 1s ease;
 }
-
+.mobile{
+    overflow: hidden;
+}
 @media(max-width:1000px) {
     .all {
         display: none;
